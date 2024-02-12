@@ -1,6 +1,8 @@
 plugins {
     id 'java'
-
+    //id 'org.springframework.boot' version '2.5.4'
+    //id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+//    id 'org.hibernate.orm'
 }
 
 group = 'org.example'
@@ -8,22 +10,71 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        name 'jboss-snapshots-repository'
+        url 'https://repository.jboss.org/nexus/content/repositories/snapshots'
+    }
+    dependencies {
+//        implementation 'com.github.thorbenkuck:NetCom2-Service:1.0'
+//        implementation 'org.mpierce:jfixture-hibernate:1.0.1'
+//        implementation 'org.mpierce:jfixture-hibernate:1.0.1'
+//        implementation 'org.mpierce:jfixture-hibernate:1.0.1'
+        //testImplementation platform('org.junit:junit-bom:5.9.1')
+
+
+
+
+        //implementation 'org.hibernate:hibernate-core:6.4.2.Final'
+        //Could not find
+        //implementation 'org.hibernate.org:hibernate-core:6.4.2.Final'
+        //implementation 'org.hibernate:hibernate-core:6.0.0.Final'
+        //implementation 'org.hibernate.orm:hibernate-core:6.4.0.Final'
+        implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+        //implementation 'org.hibernate.org:hibernate-core:6.4.0.Final'
+        //implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+        //https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+        //implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+
+
+        // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+        //implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+
+        //core
+        //implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+        //implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+
+
+        // https://mvnrepository.com/artifact/com.h2database/h2
+        // https://mvnrepository.com/artifact/org.projectlombok/lombok
+        implementation 'com.h2database:h2:2.2.224'
+        annotationProcessor 'org.projectlombok:lombok:1.18.24'
+        compileOnly 'org.projectlombok:lombok:1.18.24'
+        implementation 'org.projectlombok:lombok:1.18.26'
+        //testImplementation 'org.junit.jupiter:junit-jupiter'
+        compileOnly 'org.projectlombok:lombok:1.18.30'
+        //implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        //implementation 'org.springframework.boot:spring-boot-starter-web'
+        ///////////////////////////
+        implementation 'org.flywaydb:flyway-core:9.22.0'
+
+    }
 }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-// https://mvnrepository.com/artifact/org.flywaydb/flyway-core
-    //*//implementation 'org.flywaydb:flyway-core:10.4.1'
-
-// https://mvnrepository.com/artifact/org.flywaydb/flyway-core
-    implementation 'org.flywaydb:flyway-core:9.22.3'
-
-    implementation 'com.h2database:h2:2.2.224'
-}
 
 test {
     useJUnitPlatform()
 }
+
+//hibernate {
+//    useSameVersion = false
+//    enhancement {
+//        enableLazyInitialization.set(true)
+//        lazyInitialization = true
+//
+//        enableDirtyTracking.set(true)
+//        dirtyTracking = true
+//    }
+//}
+
 
 
