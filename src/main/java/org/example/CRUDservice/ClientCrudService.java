@@ -35,7 +35,7 @@ public class ClientCrudService {
             session.update(client);
             tx.commit();
         } catch (RuntimeException e) {
-            throw e;
+            e.printStackTrace();
         }
     }
 
@@ -47,11 +47,9 @@ public class ClientCrudService {
             if (clientToDelete != null) {
                 session.delete(clientToDelete);
                 tx.commit();
-            } else {
-                System.out.println(clientId + " id not found.");
             }
         } catch (RuntimeException e) {
-            throw e;
+            e.printStackTrace();
         }
     }
 }

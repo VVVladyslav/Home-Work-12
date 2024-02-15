@@ -3127,3 +3127,7 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 39 more
+2024-02-15 22:07:36.550322+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]dro all objects"; ожидалось "DELETE, DROP"
+Syntax error in SQL statement "[*]dro all objects"; expected "DELETE, DROP"; SQL statement:
+dro all objects [42001-224]
