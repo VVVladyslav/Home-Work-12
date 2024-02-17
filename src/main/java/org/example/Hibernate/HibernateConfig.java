@@ -2,6 +2,7 @@ package org.example.Hibernate;
 import lombok.Getter;
 import org.example.Entity.Client;
 import org.example.Entity.Planet;
+import org.example.Entity.Ticket;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -20,6 +21,7 @@ public class HibernateConfig {
             sessionFactory = new Configuration()
                     .addAnnotatedClass(Client.class)
                     .addAnnotatedClass(Planet.class)
+                    .addAnnotatedClass(Ticket.class)
                     .buildSessionFactory();
         } catch (HibernateException e) {
             throw new RuntimeException(e);
