@@ -12,42 +12,27 @@ public class Main {
     public static void main(String[] args) {
         Flyway flyway = new Flyway();
 
-
         ClientCrudService clientCrudService = new ClientCrudService();
         Client client = new Client();
         Planet planet = new Planet();
         PlanetCrudService planetCrudService = new PlanetCrudService();
-//
-//        /////////////////////////////////
-//        client.setName("Johnnnn");
-//        clientCrudService.createClient(client);
-//        /////////////////////////////////
-//        clientCrudService.deleteClient(16);
-//        /////////////////////////////////
-//        System.out.println(clientCrudService.getAllClients());
-//        System.out.println(clientCrudService.getByIdClient(10l));
-//        /////////////////////////////////
-//        client.setName("Joh1212");
-//        client.setId(25);
-//        clientCrudService.updateClient(client);
-//        /////////////////////////////////
-//
-//
-//
-//        planet.setId("MOROKO");
-//        planet.setName("moroko");
-//        planetCrudService.createPlanet(planet);
-//        /////////////////////////////////
-//        planetCrudService.deletePlanet("MOROKO");
-//        /////////////////////////////////
-//        System.out.println(planetCrudService.getAllPlanets());
-//        /////////////////////////////////
-//        System.out.println(planetCrudService.getByNamePlanet("MARS"));
-//        /////////////////////////////////
-//        planet.setId("MOROKO");
-//        planet.setName("Morrrrr");
-//        planetCrudService.updatePlanet(planet);
-        ///
+        client.setName("Johnnnn");
+        clientCrudService.createClient(client);
+        clientCrudService.deleteClient(16);
+        System.out.println(clientCrudService.getAllClients());
+        System.out.println(clientCrudService.getByIdClient(10l));
+        client.setName("Joh1212");
+        client.setId(25);
+        clientCrudService.updateClient(client);
+        planet.setId("MOROKO");
+        planet.setName("moroko");
+        planetCrudService.createPlanet(planet);
+        planetCrudService.deletePlanet("MOROKO");
+        System.out.println(planetCrudService.getAllPlanets());
+        System.out.println(planetCrudService.getByNamePlanet("MARS"));
+        planet.setId("MOROKO");
+        planet.setName("Morrrrr");
+        planetCrudService.updatePlanet(planet);
 
         Ticket ticket1 = new Ticket();
         ticket1.setClient(null);
